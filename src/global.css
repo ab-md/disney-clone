@@ -1,0 +1,72 @@
+body {
+    background-color: #13151F;
+    color: #FFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 40vh;
+}
+
+.tag-videos {
+    margin-right: 20px;
+}
+
+.tag-image {
+    width: 20%;
+    border-radius: 10px;
+}
+
+.single-banner {
+    position: relative;
+}
+
+.watch {
+    position: absolute;
+    top: 50vh;
+    left: 30px;
+}
+
+.watch button {
+    margin-top: 20px;
+    padding: 5px 10px;
+}
+
+.franchise-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+
+.franchise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.franchise:not(.franchise:last-child) {
+    margin-right: 10px;
+}
+
+.franchise img {
+    width: 100%;
+    padding: 10px;
+}
