@@ -1,3 +1,26 @@
+# This project is a disney+ clone which I have used hypergraph for it's backend. Hypergraph is a headless cms which helps to produce graphql api
+
+## Project Perview
+### home page
+
+<div align="center">
+  <img src="https://github.com/ab-md/disney-clone/blob/main/screenshots/jenres.png?raw=true" alt="home"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/ab-md/disney-clone/blob/main/screenshots/banner.png?raw=true" alt="home"/>
+</div>
+
+### video page
+
+<div align="center">
+  <img src="https://github.com/ab-md/disney-clone/blob/main/screenshots/single%20video.png?raw=true" alt="home"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/ab-md/disney-clone/blob/main/screenshots/watching.png?raw=true" alt="home"/>
+</div>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
