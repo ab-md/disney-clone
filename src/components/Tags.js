@@ -5,10 +5,10 @@ import Videos from './Videos';
 import { GET_VIDEOS } from '../graphql/queries';
 
 // images
-import disneyLogo from "../assets/images/disney.png";
+import disneyLogo from "../assets/images/disney+.png";
 import marvelLogo from "../assets/images/marvel_studios.png";
 import pixarLogo from "../assets/images/pixarr.png";
-import starwarsLogo from "../assets/images/starWars.png";
+import starwarsLogo from "../assets/images/star-wars.png";
 import natgeoLogo from "../assets/images/national-geographic.png";
 
 const Tags = () => {

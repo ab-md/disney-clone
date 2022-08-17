@@ -1,15 +1,17 @@
 import React from 'react';
 
 import Banner from '../components/Banner';
+import Navbar from '../components/Navbar';
 import Tags from '../components/Tags';
 
 const Home = () => {
 
     return (
-        <div>
+        <>
+            <Navbar />
             <Banner />
             <Tags />
-        </div>
+        </>
     );
 };
 

@@ -13,6 +13,28 @@ body {
     outline: none;
 }
 
+.navbar {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    width: 100px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
 .banner-container {
     width: 100%;
     overflow: hidden;
@@ -20,7 +42,21 @@ body {
 
 .banner-image {
     width: 100%;
-    height: 40vh;
+    height: 50vh;
+}
+
+.jenre-container {
+    padding: 0 20px;
+}
+
+.jenre-container:not(.jenre-container:first-child) {
+    margin-top: 40px;
+}
+
+.jenre-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .tag-videos {
@@ -34,6 +70,7 @@ body {
 
 .single-banner {
     position: relative;
+    height: 100vh;
 }
 
 .watch {
@@ -42,15 +79,33 @@ body {
     left: 30px;
 }
 
+.watch p {
+    font-size: 1.2rem;
+}
+
 .watch button {
     margin-top: 20px;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid #3f7db7;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    width: 150px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.watch button:hover {
+    background-color: #3f7db7;
+    color: #FFF;
 }
 
 .franchise-container {
     display: flex;
     justify-content: space-between;
     margin: 70px 0;
+    padding: 0 20px;
 }
 
 .franchise {
@@ -58,7 +113,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 20%;
-    background-color: #fff;
+    background-color: #1E2148;
     border-radius: 10px;
 }
 

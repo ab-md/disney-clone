@@ -12,22 +12,20 @@ const Video = () => {
     const { loading, error, data } = useQuery(GET_VIDEO, {
         variables: { slug: slug }
     })
-    // console.log({ loading, error, data });
 
-    const [whatch, { data: updatedData, error: updateError, loading: updating }] = useMutation(WATCH_VIDEO, {
+    const [whatch, watchResult] = useMutation(WATCH_VIDEO, {
         variables: { slug }
     })
     const [publishWatching, result] = useMutation(PUBLISH_WATCHING, {
         variables: { slug }
     })
-    console.log([publishWatching, result]);
 
     const [watching, setWatching] = useState(false);
 
     // const watchingToggle = () => watching ? setWatching(false) : setWatching(true);
 
     return (
-        <div>
+        <>
             {
                 loading ? <p>Loading ...</p> :
                     error ? <p>Error ...</p> :
@@ -36,7 +34,7 @@ const Video = () => {
                             <div className='banner-container single-banner'>
                                 <img
                                     className='banner-image'
-                                    style={{ height: "100vh" }}
+                                    style={{ height: "100%" }}
                                     src={data.video.cover.url}
                                     alt={data.video.cover.fileName.split(".")[0]}
                                 />
@@ -65,7 +63,7 @@ const Video = () => {
                     ></div>
                 </>
             }
-        </div>
+        </>
     );
 };
 

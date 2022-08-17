@@ -61,8 +61,25 @@ const UNWATCHED_VIDEOS = gql`
     }
 `
 
+const GET_USER = gql`
+    query {
+      account(where: {username: "daniel"}) {
+        username
+        avatar {
+          url
+          fileName
+        }
+        platform {
+          title
+          slug
+        }
+      }
+    }
+`
+
 export {
     GET_VIDEOS,
     GET_VIDEO,
     UNWATCHED_VIDEOS,
+    GET_USER,
 }
