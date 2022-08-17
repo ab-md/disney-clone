@@ -133,3 +133,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.nav-loading {
+    width: 50px;
+}

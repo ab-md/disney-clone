@@ -4,6 +4,8 @@ import { useQuery } from "@apollo/client";
 import disneyLogo from "../assets/images/disney+.png";
 import { GET_USER } from "../graphql/queries";
 
+import loader from "../assets/images/loader.svg"
+
 const Navbar = () => {
 
     const { loading, error, data } = useQuery(GET_USER);
@@ -14,8 +16,8 @@ const Navbar = () => {
                 <img className="nav-logo" src={disneyLogo} alt="disney logo" />
             </Link>
             {
-                loading ? <p>Loading ...</p> :
-                    error ? <p>Error ...</p> :
+                loading ? <img className="nav-loading" src={loader} alt="loading" /> :
+                    error ? alert("Some error happened!<br />Please try again later.") :
                         data &&
                         <div className="user-info">
                             <span>{data.account.username.toUpperCase()}</span>
