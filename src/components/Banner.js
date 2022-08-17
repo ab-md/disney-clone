@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import { GET_VIDEOS } from '../graphql/queries';
 
 import "./banner.css";
+import Loading from './Loading';
 
 const Banner = () => {
 
@@ -20,10 +21,10 @@ const Banner = () => {
         const slug = await randomVid.slug;
         setRandom({
             ...random,
-             url,
-             alt,
-             slug
-            })
+            url,
+            alt,
+            slug
+        })
     }
 
     useEffect(() => {
@@ -33,18 +34,18 @@ const Banner = () => {
     return (
         <div>
             {
-                loading ? <p>Loading ...</p> :
-                    error ? <p>Error ...</p> :
+                loading ? <Loading /> :
+                    error ? alert("Some error happened!<br />Please try again later.") :
                         data &&
                         // <div>
-                            <Link to={`/videos/${random.slug}`} className='banner-container'>
-                                <img
-                                    className='banner-image'
-                                    src={random.url}
-                                    alt={random.alt}
-                                />
-                            </Link>
-                        // </div>
+                        <Link to={`/videos/${random.slug}`} className='banner-container'>
+                            <img
+                                className='banner-image'
+                                src={random.url}
+                                alt={random.alt}
+                            />
+                        </Link>
+                // </div>
             }
         </div>
     );

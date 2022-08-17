@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import { GET_VIDEO } from "../graphql/queries";
 import { PUBLISH_WATCHING, WATCH_VIDEO } from '../graphql/mutation';
+import Loading from '../components/Loading';
 
 const Video = () => {
 
@@ -27,8 +28,8 @@ const Video = () => {
     return (
         <>
             {
-                loading ? <p>Loading ...</p> :
-                    error ? <p>Error ...</p> :
+                loading ? <Loading /> :
+                    error ? alert("Some error happened!<br />Please try again later.") :
                         data && !watching &&
                         <>
                             <div className='banner-container single-banner'>

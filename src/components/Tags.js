@@ -10,6 +10,7 @@ import marvelLogo from "../assets/images/marvel_studios.png";
 import pixarLogo from "../assets/images/pixarr.png";
 import starwarsLogo from "../assets/images/star-wars.png";
 import natgeoLogo from "../assets/images/national-geographic.png";
+import Loading from './Loading';
 
 const Tags = () => {
 
@@ -48,8 +49,8 @@ const Tags = () => {
                 }
             </div>
             {
-                loading ? <p>Loading ...</p> :
-                    error && <p>Error ...</p>
+                loading ? <Loading /> :
+                    error && alert("Some error happened!<br />Please try again later.")
             }
 
             {
